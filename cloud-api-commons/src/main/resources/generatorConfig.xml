@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <classPathEntry
+            location="D:/maven/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
+
+    <context id="my" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.1.114:3306/lykj?useUnicode=true&amp;characeterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="anxin521."/>
+
+        <javaModelGenerator
+                targetPackage="com.lykj.springcloud.data.entities"
+                targetProject="E:/code/server/code/2019lab/cloud-api-commons/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator
+                targetPackage="resources.mappers"
+                targetProject="E:/code/server/code/2019lab/cloud-api-data/src/main">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator
+                targetPackage="com.lykj.springcloud.data.dao"
+                targetProject="E:/code/server/code/2019lab/cloud-api-data/src/main/java"
+                type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--自动生成表单对应的domain/mapper/sql-->
+        <!--tabal: account-->
+        <table tableName="account" domainObjectName="Account" mapperName="AccountMapper" sqlProviderName="AccountSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--tabal: project-->
+        <table tableName="project" domainObjectName="Project" mapperName="ProjectMapper" sqlProviderName="ProjectSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--tabal: taskTable-->
+        <table tableName="taskTable" domainObjectName="TaskTable" mapperName="TaskTableMapper" sqlProviderName="TaskTableSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--tabal: taskTemple-->
+        <table tableName="taskTemple" domainObjectName="TaskTemple" mapperName="TaskTempleMapper" sqlProviderName="TaskTempleSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--tabal: workFlowTable-->
+        <table tableName="workFlowTable" domainObjectName="WorkFlowTable" mapperName="WorkFlowTableMapper" sqlProviderName="WorkFlowTableSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--tabal: WorkFlowTemple-->
+        <table tableName="workFlowTemple" domainObjectName="WorkFlowTemple" mapperName="WorkFlowTempleMapper" sqlProviderName="WorkFlowTempleSQL"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--&lt;!&ndash;tabal: demo&ndash;&gt;-->
+        <!--<table tableName="" domainObjectName="" mapperName="Mapper" sqlProviderName="SQL"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByExampleQueryId="true" >-->
+            <!--<property name="useActualColumnNames" value="true"/>-->
+        <!--</table>-->
+    </context>
+</generatorConfiguration>
